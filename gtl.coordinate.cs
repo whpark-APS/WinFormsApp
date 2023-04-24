@@ -11,6 +11,25 @@ namespace gtl.coordinate
 
         public override string ToString() => $"({x},{y})";
 
+        public double this[int index] {
+            get {
+                switch (index)
+                {
+                    case 0: return x;
+                    case 1: return y;
+                    default: throw new IndexOutOfRangeException();
+                }
+            }
+            set {
+                switch (index)
+                {
+                    case 0: x = value; break;
+                    case 1: y = value; break;
+                    default: throw new IndexOutOfRangeException();
+                }
+            }
+        }
+
         public Point GetNoralized() {
             var v = new Point(x, y);
             v.Normalize();
@@ -31,6 +50,30 @@ namespace gtl.coordinate
         public Point3(double _x = .0, double _y = .0, double _z = .0) => (x, y, z) = (_x, _y, _z);
 
         public override string ToString() => $"({x},{y},{z})";
+
+        public double this[int index]
+        {
+            get
+            {
+                switch (index)
+                {
+                    case 0: return x;
+                    case 1: return y;
+                    case 2: return z;
+                    default: throw new IndexOutOfRangeException();
+                }
+            }
+            set
+            {
+                switch (index)
+                {
+                    case 0: x = value; break;
+                    case 1: y = value; break;
+                    case 2: z = value; break;
+                    default: throw new IndexOutOfRangeException();
+                }
+            }
+        }
 
         public void Normalize() => (x, y, z) = (x / Length(), y / Length(), z / Length());
 

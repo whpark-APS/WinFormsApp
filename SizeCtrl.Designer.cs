@@ -34,7 +34,6 @@ namespace WinFormsApp
             // 
             // lblSize
             // 
-            this.lblSize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblSize.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSize.Font = new System.Drawing.Font("Cascadia Code", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblSize.Location = new System.Drawing.Point(0, 0);
